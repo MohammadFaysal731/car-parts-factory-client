@@ -1,27 +1,15 @@
+import { Route, Routes } from 'react-router-dom';
 import './App.css';
-import Header from './components/Header';
-
+import Header from './components/Header/Header';
+import Home from './pages/Home/Home';
 function App() {
   return (
-    <div className="App">
-      <Header />
-      <div className="dropdown">
-        <label tabIndex={0} className="btn m-1">
-          Click
-        </label>
-        <ul
-          tabIndex={0}
-          className="dropdown-content menu p-2 shadow bg-base-100 rounded-box w-52"
-        >
-          <li>
-            <a>Item 1</a>
-          </li>
-          <li>
-            <a>Item 2</a>
-          </li>
-        </ul>
-      </div>
-    </div>
+  <div>
+    <Header/>
+    <Routes>
+      <Route path="/"element={<Home/>}></Route>
+    </Routes>
+  </div>
   );
 }
 
